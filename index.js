@@ -27,12 +27,12 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
-mongoose
+mongoose 
   .connect(process.env.DB_URI)
   .then(() => {
     // listen for requests
   console.log('db connected');
   })
-  .catch((err) => {
+  .catch((err) => { 
     console.log(err);
   });
