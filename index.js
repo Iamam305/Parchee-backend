@@ -5,12 +5,15 @@ const express = require('express')
 const AuthRoutes = require('./routes/auth')
 const NotesRoute = require('./routes/notes')
 const app = express()
+var cors = require('cors')
 const port = 5000
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
+
 // middleware
+app.use(cors())
 app.use(express.json());
 
 app.use((req, res, next) => {
